@@ -1,0 +1,23 @@
+.App {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 105px;
+}
+.App h1 {
+    font-size: 5em;
+}
+.App button {
+    all: unset;
+    font-size: 1.3em;
+    background-color: blueviolet;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+
+}
+.App .btns {
+    
+}
