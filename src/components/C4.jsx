@@ -1,14 +1,15 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { increase, decrease } from "../redux/actions";
+import "../App.css";
 function C4() {
   const dispatch = useDispatch();
-  let counter = useSelector((store) => store);
-  console.log(counter);
+  let store = useSelector((store) => store);
+  console.log(store);
   return (
     <div className="bnts">
       <div>
-        <h1>{counter}</h1>
+        <h1>{store.counter}</h1>
 
         <button
           className="font-tajawal"
