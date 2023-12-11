@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { increase, decrease } from "../redux/actions";
+import { increase, decrease, changeName } from "../redux/actions";
 import "../App.css";
 function C4() {
   const dispatch = useDispatch();
@@ -27,6 +27,10 @@ function C4() {
           Decrease
         </button>
       </div>
+      <h1>{store.name}</h1>
+      <button onClick={()=>{
+        dispatch(changeName())
+      }}>Change Name</button>
     </div>
   );
 }

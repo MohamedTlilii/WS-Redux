@@ -8,3 +8,8 @@ export const decrease = () => {
     type: "DECREASE",
   };
 };
+export const changeName = () => {
+  return {
+    type: "CHANGE_NAME",
+  };
+};

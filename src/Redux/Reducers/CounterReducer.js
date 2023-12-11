@@ -5,12 +5,18 @@ const counterReducer = (
   },
   action
 ) => {
-  if (action.type === "INCREASE") {
-    return { ...state, counter: state.counter + 1 };
-  } else if (action.type === "DECREASE" && state.counter > 0) {
-    return { ...state, counter: state.counter - 1 };
-  } else {
-    return state;
+  switch (action.type) {
+    case "INCREASE":
+      return { ...state, counter: state.counter + 1 };
+    case "DECREASE":
+      if (state.counter > 0) {
+        return { ...state, counter: state.counter - 1 };
+      }
+      break; // Add this break statement
+    case "CHANGE_NAME":
+      return { ...state, name: "Mohamed Tlili" };
+    default:
+      return state;
   }
 };
 
