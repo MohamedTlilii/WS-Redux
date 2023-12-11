@@ -1,8 +1,14 @@
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import React from "react";
 
 function App() {
-  return <h1>0</h1>;
+  return (
+    <div>
+      <h1>0</h1>
+      <button>Increase</button>
+      <button>Decrease</button>
+    </div>
+  );
 }
 
 export default App;
